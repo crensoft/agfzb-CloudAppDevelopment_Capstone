@@ -1,11 +1,42 @@
+{% extends 'base.html' %}
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    {% load static %}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
+    <head>
+        <title>{% block title %} Register{% endblock %}</title>
+    </head>
     <body>
-    <!--Add a registration form here -->
+   
+        {% block pagecontent %}
+            <div class="registration-block">
+                <h1>
+                    Create an account
+                </h1>
+                <form action="{% url 'djangoapp:registration' %}" method="post">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">User Name</label>
+                        <input required name="username" type="text" class="form-control" id="username" placeholder="Enter User Name:">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="first_name" class="form-label">First Name</label>
+                        <input required name="firstname" type="text" class="form-control" id="first_name" placeholder="Enter First Name:">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="last_name" class="form-label">Last Name</label>
+                        <input required name="lastname" type="text" class="form-control" id="last_name" placeholder="Enter Last Name:">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input required name="psw" type="password" class="form-control" id="password" placeholder="Enter Password:">
+                    </div>
+
+                    <div>{% csrf_token %}<button class="btn btn-lg btn-secondary" type="submit">Sign up</button></div>
+                </form>
+            </div>
+        {% endblock %}
+
     </body>
 </html>

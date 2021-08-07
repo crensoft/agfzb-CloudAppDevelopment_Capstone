@@ -1,0 +1,151 @@
+nav.navbar {
+    flex-wrap: nowrap;
+}
+
+nav.navbar > div > * {
+    width: 33%;
+}
+
+.navbar-nav .nav-link {
+    color: #222;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.navbar-nav {
+    flex-direction: row;
+}
+
+.nav-divider {
+    border-left: 2px solid #ddd;
+    height: 100%;
+    margin: 0 15px;
+    padding: 5px 0;
+}
+nav .form-inline .form-control {
+    background-color: #eee;
+    margin-right: .5rem;
+}
+
+.btn-primary {
+    background-color: #E87121;
+    border-color: #E87121;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: #9C450B !important;
+    border-color: #9C450B !important;
+}
+
+.link-primary {
+    color: #E87121;
+    border-color: #E87121;
+}
+
+button:hover {
+    text-decoration: none !important;
+}
+
+.link-primary:hover, .link-primary:focus, .link-primary:active {
+    color: #9C450B !important;
+    border-color: #9C450B !important;
+}
+
+.btn-secondary {
+    background-color: #18A4AB;
+    border-color: #18A4AB;
+}
+
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+    background-color: #00939C !important;
+    border-color: #00939C !important;
+}
+
+.btn-outline-secondary {
+    color: #24F4FF;
+    border-color: #24F4FF;
+}
+
+.btn-outline-secondary:hover {
+    color: #fff;
+    background-color: #18A4AB;
+    border-color: #18A4AB;
+}
+
+.btn-hero, .btn-hero:hover, .btn-hero:active, .btn-hero:focus {
+    background-color: #fff;
+    border-color: #fff;
+    color: #E87121;
+    font-weight: bold;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main > .container-fluid {
+    flex: 1;
+}
+
+.layout main {
+    flex-grow: 1;
+    display: flex;
+}
+
+.cover {
+    max-height: 60vh;
+    min-height: 300px;
+    background-color: #9C440B;
+    padding: 6rem;
+    color: #fff;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 1rem;
+}
+
+.cover-content {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.cover-content::before {
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    border-radius: 1rem;
+}
+
+.cover h2 {
+    font-size: 3rem;
+}
+
+.cover h2, .cover a {
+    z-index: 5;
+}
+
+.registration-block {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #eee;
+    padding: 2rem;
+    border-color: #222;
+}
+
+footer > div {
+    text-align: center;
+    color: #666
+}

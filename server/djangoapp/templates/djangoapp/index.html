@@ -1,15 +1,20 @@
 {% extends 'base.html' %}
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>{% block title %} Reviews {% endblock %}</title>
+        <title>{% block title %} Your Trusted Dealership Reviews {% endblock %}</title>
     </head>
 
     <body>
    
         {% block pagecontent %}
-
+        <div class="cover" style="background-image: url({% static '/img/hero-image.jpg' %})">
+            <div class="cover-content">
+                <h2 class="mb-5">Your Trusted <span style="color: #E87121">Dealership Reviews</span></h2>
+                <a class="btn btn-lg btn-hero" href="#reviews">Read Reviews</a>
+            </div>
+        </div>
         {% endblock %}
     <!--Add a dealer table here -->
 

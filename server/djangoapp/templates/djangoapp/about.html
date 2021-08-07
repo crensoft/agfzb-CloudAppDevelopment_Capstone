@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,9 +8,14 @@
     <body>
    
         {% block pagecontent %}
-            <h1>
-                Welcome to Best Cars dealership, home to the best cars in North America. We sell domestic and imported cars at reasonable prices.
-            </h1>
+            <div class="cover" style="background-color: #E87121">
+                <div class="cover-content">
+                    <h1 style="z-index: 4">
+                        Welcome to Best Cars dealership, home to the best cars in North America. We sell domestic and imported cars at reasonable prices.
+                    </h1>
+                </div>
+            </div>
+            
         {% endblock %}
 
     </body>
