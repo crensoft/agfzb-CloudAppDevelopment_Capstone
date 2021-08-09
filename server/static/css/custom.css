@@ -14,6 +14,7 @@ nav.navbar > div > * {
 
 .navbar-nav {
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .nav-divider {
