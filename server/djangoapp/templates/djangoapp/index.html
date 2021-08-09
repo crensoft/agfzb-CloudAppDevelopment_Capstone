@@ -1,23 +1,41 @@
 {% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>{% block title %} Your Trusted Dealership Reviews {% endblock %}</title>
-    </head>
+{% block title %} Your Trusted Dealership Reviews {% endblock %}
 
-    <body>
    
-        {% block pagecontent %}
-        <div class="cover" style="background-image: url({% static '/img/hero-image.jpg' %})">
-            <div class="cover-content">
-                <h2 class="mb-5">Your Trusted <span style="color: #E87121">Dealership Reviews</span></h2>
-                <a class="btn btn-lg btn-hero" href="#reviews">Read Reviews</a>
-            </div>
-        </div>
-        {% endblock %}
-    <!--Add a dealer table here -->
+{% block pagecontent %}
+<div class="cover" style="background-image: url({% static '/img/hero-image.jpg' %})">
+    <div class="cover-content">
+        <h2 class="mb-5">Your Trusted <span style="color: #E87121">Dealership Reviews</span></h2>
+        <!-- <a class="btn btn-lg btn-hero" href="#reviews">Read Reviews</a> -->
+    </div>
+</div>
 
-    </body>
-
-</html>
+<table class="table mt-3" id="table" data-filter-control="true">
+    <thead>
+        <th data-field="id">ID</th>
+        <th data-field="dealer-name">Dealer Name</th>
+        <th data-field="city">City</th>
+        <th data-field="address">Address</th>
+        <th data-field="zip">Zip</th>
+        <th data-field="state" data-filter-control="select">State</th>
+    </thead>
+    <tbody>
+        {% for dealer in dealerships %}
+        <tr>
+            <td>{{dealer.id}}</td>
+            <td><a href="{% url 'djangoapp:dealer_details' dealer.id %}">{{dealer.full_name}}</a></td>
+            <td>{{dealer.city}}</td>
+            <td>{{dealer.address}}</td>
+            <td>{{dealer.zip}}</td>
+            <td>{{dealer.st}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<script>
+$(function() {
+    $('#table').bootstrapTable()
+})
+</script>
+{% endblock %}
